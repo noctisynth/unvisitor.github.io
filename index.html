@@ -1,92 +1,147 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!DOCTYPE HTML>
 
-<head>
-	<meta charset="utf-8">
-        <meta name="baidu-site-verification" content="6L1dk2Y0nJ" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="msvalidate.01" content="2D76DBA9C0B07B52C5A4E01E9C544670" />
-	
-	<META name=description content="中国秦川联盟|中国云客联盟|中国秦川科技|秦盾|中国秦川学术|米兔联盟|天狼队中国TZB国际网安">
-	<link rel="shortcut icon" href="../static/favicon.ico" />
-	<title>中国秦川联盟</title>
-<meta name="google-site-verification" content="Z7G5Ye7l4HdXD3LNZgM64B2l6DxoF0nyOu6myi858yQ" />
-<link rel="stylesheet" type="text/css" href="../static/css/singlePageTemplate.css">
-<link rel="stylesheet" type="text/css" href="../static/css/huc.css">
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>未知访客</title>
+		<link rel="stylesheet" href="/static/assets/css/main.css" />
+		<!--<link rel="stylesheet" href="https://cdn.staticfile.org/bootstrap/5.3.0/css/bootstrap.min.css">-->
+		<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.0/css/fontawesome.css">
+		</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="/" class="logo"><strong>未知</strong>访客</a>
+					<nav id="nav">
+						<a href="/">主页</a>
+						<a href="/generic.html">加入我们</a>
+						{% if is_login %}
+						<a href="/logout/">注销</a>
+						<a class="split">|</a>
+						<a href="/dashboard/" class="login-bar">我的主页</a>
+						{% else %}
+						<a href="/regist/">注册</a>
+						<a class="split">|</a>
+						<a href="/login/" class="login-bar">登录</a>
+						{% endif %}
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<header>
+						<h1>未知访客</h1>
+					</header>
+
+					<div class="flex">
+
+						<div>
+							<span class="icon fa-globe"></span>
+							<h3>Global</h3>
+							<p>你能在任何地方访问这里</p>
+						</div>
+
+						<div>
+							<span class="icon fa-code"></span>
+							<h3>Code</h3>
+							<p>你可以在这里寻求帮助</p>
+						</div>
+
+						<div>
+							<span class="icon fa-bug"></span>
+							<h3>Bug</h3>
+							<p>这里提供可能存在的漏洞</p>
+						</div>
+
+					</div>
+
+					<footer>
+						{% if is_login %}
+						<a href="" class="button">我的主页</a>
+						{% else %}
+						<a href="/login/" class="button">登录</a>
+						{% endif %}
+					</footer>
+				</div>
+			</section>
 
 
-<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
-<script>var __adobewebfontsappname__="dreamweaver"</script>
-<script src="../static/js/home.js" type="text/javascript"></script>
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-<body>
-<!-- Main Container -->
-<div class="container"> 
-  <!-- Navigation -->
-  <header> <a href="">
-    <h4 class="logo">QUC</h4>
-  </a>
-    <nav>
-      <ul>
-		  <li><a href="#hero">首页</a></li>
-        <li><a href="#about">关于</a></li>
-        <!-- <li> <a href="#contact">CONTACT</a></li> -->
-      </ul>
-    </nav>
-  </header>
-  <!-- Hero Section -->
-  <section class="hero" id="hero" >
-	  <div align="center">
-	  <p class="style1"><span class="STYLE7 STYLE1 STYLE13">
-		  <a href="./static/action.html">行动规划 </a>
-	      <a href="../static/purpose.html">秦盟宗旨</a> <a href="../static/announcement.html">秦盟公告</a> <a href="../static/member.html">成员召回</a> <a href="../static/post.html">加入秦盟</a></span><a href='../static/solve.html'> 解决方案</a></p>
-		  </div>
-	  <br>
-	  <br>
-    <h2 class="hero_header">中国秦川联盟 </h2>
-</section>
-  <!-- About Section -->
-  <section class="about" id="about">
-    <h2 class="hidden">About</h2>
-    <p class="text_column">中国秦川联盟于2011年9月1日由伏西雨、陈子墨等中国秦川联盟早期盟员在中华人民共和国陕西省西安市蓝田县焦岱镇创建。 </p>
-    <p class="text_column">Qinchuan Union of China was founded on September 1, 2011 by XiyuFu, ZimoChen and other early members of Qinchuan Union of China in Lantian county, Xi'an, Shaanxi province, the People's Republic of China.</p>
-    <p class="text_column">Союз цинь чуань был создан 1 сентября 2011 года в префектуре лантида в провинции шаньси (Китайская Народная Республика) одним из первых коветов союза васи юй, чэнь цзы мо и других членов китайской коалиции цинь чунь. </p>
-  </section>
-  <!-- Stats Gallery Section -->
-  
-  <!-- Parallax Section -->
-  <section class="banner">
-    <h2 class="parallax">秦川联盟</h2>
-    <p class="parallax_description">我们十分欢迎各界人士加入中国秦川联盟，我们希望实现科技共产，真正实现人类命运共同体，如果有意愿，联系QQ:1264983312，<br>E-mail:admin@qucmail.tk</p>
-  </section>
-  <!-- More Info Section -->
-  <footer>
-    <article class="footer_column">
-      <h3>关于秦川联盟</h3>
-      <p>我们是一个综合性组织，旗下有晨凤社、雨墨局、中国云客联盟等附属组织。<br>我们的合作伙伴有中国米兔联盟，中国天狼队等。</p>
-    </article>
-    <article class="footer_column">
-      <h3>位置</h3>
-      <p>陕西省西安市。</p>
-    </article>
-  </footer>
-  <!-- Footer Section -->
-  <section class="footer_banner" id="contact">
-    <!-- <h2 class="hidden">Footer Banner Section </h2> -->
-    <p class="hero_header">寻求科技援助？网站遭到攻击？</p>
-	  <a href="../static/solve.html"><div class="button">解决方案</div></a>
-  </section>
-  <!-- Copyrights Section -->
-  <div class="copyright">&copy;2014~2019 - Qinchuan Union of china</div>
-</div>
+		<!-- Three -->
+			<section id="three" class="wrapper align-center">
+				<div class="inner">
+					<div class="flex flex-2">
+						<article>
+							<div class="image round">
+								<img src="/static/images/pic01.jpg" alt="Pic 01" />
+							</div>
+							<header>
+								<h3>这里没有数据</h3>
+							</header>
+							<p>网站正在维护中，这里没有任何数据</p>
+							<footer>
+								<a href="#" class="button">了解更多</a>
+							</footer>
+						</article>
+						<!--
+						<article>
+							<div class="image round">
+								<img src="/static/images/pic02.jpg" alt="Pic 02" />
+							</div>
+							<header>
+								<h3>Sed feugiat<br /> tempus adipicsing</h3>
+							</header>
+							<p>Pellentesque fermentum dolor. Aliquam quam lectus<br />facilisis auctor, ultrices ut, elementum vulputate, nunc<br /> blandit ellenste egestagus commodo.</p>
+							<footer>
+								<a href="#" class="button">Learn More</a>
+							</footer>
+						</article>
+						-->
+					</div>
+				</div>
+			</section>
 
-<!-- Main Container Ends -->
-</body>
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+
+					<h3>联系我们</h3>
+
+					<form action="#" method="post">
+
+						<div class="field half first">
+							<label for="name">昵称</label>
+							<input name="name" id="name" type="text" placeholder="Name">
+						</div>
+						<div class="field half">
+							<label for="email">邮箱</label>
+							<input name="email" id="email" type="email" placeholder="Email">
+						</div>
+						<div class="field">
+							<label for="message">信息</label>
+							<textarea name="message" id="message" rows="6" placeholder="Message" style="resize: none;"></textarea>
+						</div>
+						<ul class="actions" style="color:SlateGray;">
+							<li><input value="正在维护中，暂不可使用" class="button alt" type="submit"></li>
+						</ul>
+					</form>
+				</div>
+			</footer>
+
+		<div class="copyright copyright-top">
+			© CopyRight 2011-2023, <a href="/">Unknown Visitor</a>. All Rights Reserved.
+		</div>
+
+		<!-- Scripts -->
+		<script src="https://cdn.staticfile.org/jquery/3.7.0/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+		<script src="/static/assets/js/util.js"></script>
+		<script src="/static/assets/js/main.js"></script>
+	</body>
 </html>
