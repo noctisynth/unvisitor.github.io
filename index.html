@@ -18,15 +18,9 @@
 					<nav id="nav">
 						<a href="/">主页</a>
 						<a href="/generic.html">加入我们</a>
-						{% if is_login %}
-						<a href="/logout/">注销</a>
-						<a class="split">|</a>
-						<a href="/dashboard/" class="login-bar">我的主页</a>
-						{% else %}
 						<a href="/regist/">注册</a>
 						<a class="split">|</a>
 						<a href="/login/" class="login-bar">登录</a>
-						{% endif %}
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 				</div>
